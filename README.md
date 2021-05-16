@@ -1,6 +1,14 @@
 # StealthMaster-Clone
-In this project, I'm trying to make StealthMaster game. I'm currently working on this project and it's not finished yet. 
+In this project, I'm trying to make StealthMaster game. It's not finished yet. Character model has been removed duo to a bug. Here are some images from the project:
 
-Here are some photos of my project.
+![images](/Images/Stealthmaster.png)
+![images](/Images/Gif_1.gif)
+![images](/Images/Gif_2.gif)
+![images](/Images/Gif_3.gif)
 
-<img src="https://linkpicture.com/q/1_779.png" width="180" height="324"> <img src="https://linkpicture.com/q/2_491.png" width="180" height="324"> <img src="https://linkpicture.com/q/3_352.png" width="180" height="324"> <img src="https://linkpicture.com/q/4_301.png" width="180" height="324">
+In this project I tried to do:
+- Basic AI behaviour to make enemy walk between waypoints, attack to player, chase player, return to default position.
+- Field of View for enemies to detect player.
+- UI for upgrade system between levels.
+- Design unique levels.
+
