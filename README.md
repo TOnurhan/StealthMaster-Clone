@@ -1,6 +1,7 @@
 # StealthMaster-Clone
 In this project, I'm trying to make StealthMaster game. It's not finished yet. Here are some images from the project:
 
+![images](/Images/Stealthmaster.png)
 ![images](/Images/Gif_1.gif)
 ![images](/Images/Gif_2.gif)
 ![images](/Images/Gif_3.gif)
