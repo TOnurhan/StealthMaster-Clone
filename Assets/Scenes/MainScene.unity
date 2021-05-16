@@ -492,7 +492,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1351143419
 PrefabInstance:
@@ -539,7 +539,7 @@ PrefabInstance:
     - target: {fileID: 2279746006809126841, guid: 682b2ddcce9100045b8fac80113e449d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2279746006809126841, guid: 682b2ddcce9100045b8fac80113e449d,
         type: 3}
@@ -733,7 +733,7 @@ PrefabInstance:
     - target: {fileID: 62996944987479414, guid: cb837b99f9a44764084d068e6ce1015c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 62996944987479414, guid: cb837b99f9a44764084d068e6ce1015c,
         type: 3}
@@ -830,15 +830,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 268593244007986631, guid: 24d2836bf703a8b48b4c7fa769980231,
+        type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7556051088405631624, guid: 24d2836bf703a8b48b4c7fa769980231,
         type: 3}
       propertyPath: m_Name
-      value: Player(1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7556051088405631625, guid: 24d2836bf703a8b48b4c7fa769980231,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 116
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7556051088405631627, guid: 24d2836bf703a8b48b4c7fa769980231,
         type: 3}
@@ -878,7 +878,7 @@ PrefabInstance:
     - target: {fileID: 7556051088405631627, guid: 24d2836bf703a8b48b4c7fa769980231,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7556051088405631627, guid: 24d2836bf703a8b48b4c7fa769980231,
         type: 3}
@@ -900,11 +900,21 @@ PrefabInstance:
       propertyPath: variableJoystick
       value: 
       objectReference: {fileID: 651019218}
+    - target: {fileID: 7556051088405631628, guid: 24d2836bf703a8b48b4c7fa769980231,
+        type: 3}
+      propertyPath: forceToDead
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7663490827558016057, guid: 24d2836bf703a8b48b4c7fa769980231,
         type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 7663490827558016057, guid: 24d2836bf703a8b48b4c7fa769980231,
+        type: 3}
+      propertyPath: currentHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7663490827558016058, guid: 24d2836bf703a8b48b4c7fa769980231,
         type: 3}
       propertyPath: m_Camera

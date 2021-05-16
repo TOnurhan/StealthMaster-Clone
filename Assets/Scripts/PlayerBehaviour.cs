@@ -1,28 +1,23 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class PlayerBehaviour : CharacterBaseScript
 {
     public static PlayerBehaviour Instance { get; private set; }
-    [SerializeField] LayerMask layerMask = default;
-    [SerializeField] GameObject shuriken = default;
-    public float throwSpeed;
-    Vector3 enemyPos;
-    [HideInInspector] public Vector3 direction;
     public FloatingJoystick variableJoystick;
-    [SerializeField] HealthBarManager healthBar = default;
-    float turnSmoothVelocity;
-    [SerializeField] float turnSmoothTime = 0.125f;
+    [SerializeField] private LayerMask layerMask = default;
+    [SerializeField] private GameObject shuriken = default;
+    [SerializeField] private HealthBarManager healthBar = default;
+    [SerializeField] private float turnSmoothTime = 0.125f;
+    [SerializeField] private Animation anim;
+    public float throwSpeed;
+    [HideInInspector] public Vector3 direction;
     public bool hasKey = false;
+    private bool died = false;
     public static event Action OpenTheDoor;
-    RaycastHit hit;
-
-
-    //[SerializeField] GameObject item1;
+    private Vector3 enemyPos;
+    private float turnSmoothVelocity;
+    private RaycastHit hit;
 
     private void Awake()
     {
@@ -30,44 +25,47 @@ public class PlayerBehaviour : CharacterBaseScript
         EnemyProjectile.GotHit += GotShot;
         healthBar.HealthReachedZero += Died;
         rigidBody = GetComponent<Rigidbody>();
-
         healthBar.IsHealthFull();
-
         variableJoystick.Reset();
+        anim.Play("AttackIdle");
     }
 
     private void FixedUpdate()
     {
-        HandleMovement();
-        Debug.DrawLine(transform.position + Vector3.up, hit.point, Color.green);
+        if (!died)
+        {
+            HandleMovement();
+        }
     }
 
-    void HandleMovement()
+    private void HandleMovement()
     {
         direction = Vector3.forward * variableJoystick.Vertical + Vector3.right * variableJoystick.Horizontal;
 
         if (direction.magnitude >= 0.1f)
         {
+            anim.Play("Run");
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0, angle, 0);
 
             rigidBody.velocity = direction * speed;
         }
+
         else
         {
             rigidBody.velocity = Vector3.zero;
+            anim.Play("AttackIdle");
         }
     }
 
-    void Attack()
+    private void Attack()
     {
         if (Physics.Raycast(transform.position + Vector3.up, enemyPos - transform.position, out hit, Mathf.Infinity, layerMask))
         {
-            
-            //Shuriken'i önceden spawnla. Instantiate etme...
             if (hit.collider.CompareTag("Enemy"))
             {
+                anim.Play("D_Attack");
                 Projectile spawnedShuriken = Instantiate(shuriken, new Vector3(transform.position.x, 1f, transform.position.z), Quaternion.identity).GetComponent<Projectile>();
                 spawnedShuriken.targetEnemy = hit.transform;
                 spawnedShuriken.speed = throwSpeed;
@@ -75,31 +73,30 @@ public class PlayerBehaviour : CharacterBaseScript
         }
     }
 
-    void GotShot()
+    private void GotShot()
     {
         healthBar.HealthBarChanged(-5);
     }
 
-    void Died()
+    private void Died()
     {
-        gameObject.SetActive(false);
-        GameObject deadBody = Instantiate(dummyBody, transform.position, Quaternion.identity);
-        deadBody.GetComponent<Rigidbody>().AddForce(-transform.forward * forceToDead);
+        died = true;
+        transform.tag = "Dead";
+        anim.Play("Death");
         GameController.Instance.GameOver();
     }
 
     void TurnToItem()
     {
-       // GameObject Item = Instantiate(item1, transform.position, Quaternion.identity);
-    }
-
-    public Vector3 GetPosition()
-    {
-        return transform.position;
+        //Turn to an item when not moving. Requires upgrade.
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (died)
+        {
+            return;
+        }
         if (other.CompareTag("Enemy"))
         {
             enemyPos = other.transform.position;

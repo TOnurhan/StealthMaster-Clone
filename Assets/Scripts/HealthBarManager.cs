@@ -40,7 +40,7 @@ public class HealthBarManager : MonoBehaviour
 
         IsHealthFull();
 
-        if(currentHealth == 0)
+        if(currentHealth <= 0)
         {
             HealthReachedZero?.Invoke();
         }

@@ -9,15 +9,15 @@ public class FieldOfView : MonoBehaviour
 
     private Vector3 origin;
     private float startingAngle;
-    RaycastHit hit;
+    private RaycastHit hit;
 
-    float angleIncrease;
-    float angle;
+    private float angleIncrease;
+    private float angle;
     [SerializeField] private int rayCount = 25;
     public float fov;
     public float viewDistance = 5f;
 
-    void Start()
+    private void Start()
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
@@ -26,7 +26,7 @@ public class FieldOfView : MonoBehaviour
     }
 
 
-    void LateUpdate()
+    private void LateUpdate()
     {
         angle = startingAngle;
 
@@ -71,13 +71,13 @@ public class FieldOfView : MonoBehaviour
         mesh.uv = uv;
         mesh.triangles = triangles;
     }
-    Vector3 GetVectorFromAngle(float angle)
+    private Vector3 GetVectorFromAngle(float angle)
     {
         float angleRad = angle * (Mathf.PI / 180f);
         return new Vector3(Mathf.Cos(angleRad), origin.y, Mathf.Sin(angleRad));
     }
 
-    float GetAngleFromVectorFloat(Vector3 dir)
+    private float GetAngleFromVectorFloat(Vector3 dir)
     {
         float n = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
         if (n < 0)

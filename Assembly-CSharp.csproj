@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8C245FB4-C0BE-3453-B82F-92D1ABE0D2E6}</ProjectGuid>
+    <ProjectGuid>{5322BF94-03D2-9272-7594-8C1BD685B489}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,44 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Archived\OldGUIExamplesCS.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Archived\TestingPunch.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralAdvancedTechniques.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasic.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasics2d.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralCameraShake.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEasingTypes.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEventsListeners.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSequencer.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSimpleUI.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralUISpace.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\LogoCinematic.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier2d.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline2d.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineEndless.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplinePerformance.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineTrack.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplines.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\TestingUnitTests.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\TestingZLegacy.cs" />
-    <Compile Include="Assets\LeanTween\Examples\Scripts\TestingZLegacyExt.cs" />
-    <Compile Include="Assets\LeanTween\Framework\LTDescr.cs" />
-    <Compile Include="Assets\LeanTween\Framework\LTDescrOptional.cs" />
-    <Compile Include="Assets\LeanTween\Framework\LTSeq.cs" />
-    <Compile Include="Assets\LeanTween\Framework\LeanAudio.cs" />
-    <Compile Include="Assets\LeanTween\Framework\LeanSmooth.cs" />
-    <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
-    <Compile Include="Assets\LeanTween\Framework\LeanTween.cs" />
-    <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CharacterBaseScript.cs" />
     <Compile Include="Assets\Scripts\DoorController.cs" />
@@ -117,27 +79,6 @@
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\UpgradeManager.cs" />
     <Compile Include="Assets\Scripts\Waypoint.cs" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\LeanTween\ReadMe.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\LeanTween\License.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\LeanTween\Examples\Archived\2dUnlitWithFade.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -676,34 +617,39 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Onurh/Downloads/StealthMaster Clone/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Onurh/Downloads/StealthMaster-Clone/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/Onurh/Downloads/StealthMaster Clone/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/Onurh/Downloads/StealthMaster-Clone/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Onurh/Downloads/StealthMaster Clone/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Onurh/Downloads/StealthMaster-Clone/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Onurh/Downloads/StealthMaster Clone/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Onurh/Downloads/StealthMaster-Clone/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Onurh/Downloads/StealthMaster Clone/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Onurh/Downloads/StealthMaster-Clone/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Onurh/Downloads/StealthMaster Clone/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Onurh/Downloads/StealthMaster-Clone/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/Onurh/Downloads/StealthMaster Clone/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/Onurh/Downloads/StealthMaster-Clone/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Onurh/Downloads/StealthMaster Clone/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Onurh/Downloads/StealthMaster-Clone/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Onurh/Downloads/StealthMaster Clone/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Onurh/Downloads/StealthMaster-Clone/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{96FC315F-6DA4-1298-1BC8-6D61AFB7A1C1}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
